@@ -14,9 +14,9 @@ Jr = 6e-5;   % rotor inertia    [kg*m^2]
 L_arm = 0.23; % arm length      [m]
 
 G_motor = 1;
-%G_motor = tf([1],[0.05 1]);
+%G_motor = tf([1],[0.01 1]);
 %G_motor = tf([0.936],[0.178 1]);
-Delay_Act = 0.01;
+Delay_Act = 0.0;
 
 
 Rotor_State_Normal = diag([1 1 1 1]);                
@@ -42,4 +42,4 @@ Bm = diag([L_arm/Ix, L_arm/Iy, 1/Iz]);
 Q = 1*eye(3);
 P = lyap(Am',Q);
 
-Ts = 0.01;
+Ts = 0.005;
