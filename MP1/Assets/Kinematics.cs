@@ -91,11 +91,11 @@ public class Kinematics : MonoBehaviour {
 			//double.TryParse(text, out x);
 			//print(">> x=" + x.ToString());
 		}
-		//uav.Move(moveSpeed*((float)x*Forward + (float)y*Side + (float)z*0f*Up)*Time.deltaTime);
+		uav.Move(moveSpeed*((float)x*Forward + (float)y*Side + (float)z*0f*Up)*Time.deltaTime);
 		transform.Rotate (rotSpeed * (float)q*Time.deltaTime, (float)r*rotSpeed*Time.deltaTime, -rotSpeed*(float)p*Time.deltaTime, Space.Self);
 		//transform.localPosition = moveSpeed * ((float)x * Forward + (float)y * Side + ((float)z) * Up);
 		//transform.Rotate (0,1F * rotSpeed * Time.deltaTime,0);
 		//transform.Translate = new Vector3((float)x, (float)y, (float)z);
-		transform.Translate((float)x, (float)y, (float)z);
+		//transform.Translate((float)x, (float)y, (float)z);
 	}
 }
